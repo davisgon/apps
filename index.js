@@ -13,8 +13,8 @@ restService.use(
 
 restService.use(bodyParser.json());
 
-restService.post("/echo", function(req, res) {
-  console.log("acaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
+restService.post("/global", function(req, res) {
+  console.log("Entra a servicio Global");
   var speech =
     req.body.result &&
     req.body.result.parameters &&
@@ -24,7 +24,7 @@ restService.post("/echo", function(req, res) {
   return res.json({
     speech: speech,
     displayText: speech,
-    source: "webhook-echo-sample"
+    source: "webhook-gyt-ws"
   });
 });
 
