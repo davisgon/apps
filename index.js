@@ -27,7 +27,7 @@ restService.post("/global", function(req, res) {
     source: "webhook-gyt-ws"
   });
 });
-
+ 
 restService.post("/audio", function(req, res) {
   var speech = "";
   switch (req.body.result.parameters.AudioSample.toLowerCase()) {
