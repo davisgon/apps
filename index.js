@@ -15,7 +15,7 @@ restService.use(bodyParser.json());
 
 restService.post("/global", function(req, res) {
   console.log("iniciaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
-  console.log(req.body.result.resolvedQuery);
+  console.log(req.body.result.parameters);
   var speech =
     req.body.result &&
     req.body.result.parameters &&
