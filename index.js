@@ -14,7 +14,7 @@ restService.use(
 restService.use(bodyParser.json());
 
 restService.post("/global", function(req, res) {
-  console.log("inicioooooooo");
+  console.log("inicio");
   console.log(req.body.result.parameters);
   var speech =
     req.body.result &&
@@ -25,7 +25,7 @@ restService.post("/global", function(req, res) {
   console.log("Sale a servicio Global");
   return res.json({
     speech: speech,
-    displayText: speech,
+    displayText: "Carnet Asegurado",
     source: "webhook-gyt-ws"
   });
 });
