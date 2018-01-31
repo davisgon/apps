@@ -16,6 +16,7 @@ restService.use(bodyParser.json());
 restService.post("/global", function(req, res) {
   console.log("inicio");
   console.log(req.body.result.parameters);
+  console.log(req.body.result.parameters.email);
   var speech =
     req.body.result &&
     req.body.result.parameters &&
