@@ -17,6 +17,12 @@ restService.post("/global", function(req, res) {
   console.log("inicio");
   console.log(req.body.result.parameters);
   console.log(req.body.result.parameters.email);
+  
+  restService.post("http://172.20.1.174:8380/gyt-api-ws/rs/public/complaints/request", function(req.body.result.parameters, res) {
+    console.log(res);
+  });  
+  
+  
   var speech =
     req.body.result &&
     req.body.result.parameters &&
