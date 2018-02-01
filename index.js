@@ -31,10 +31,14 @@ restService.post("/global", function(req, res) {
       : "http://portal.gyt.com.gt/gyt-api-crm-web/rs/public/crm/client/insured/carne?P_IDEPOL=1570346&P_IDEASEG=12095773&codProd=GTVG&numPol=197721&hash=44a5d4645a1caafe1f973e7a52482517";
   console.log("Sale a servicio Global");
   return res.json({
-    speech: speech,
-    displayText: "Carnet Asegurado",
-    source: "webhook-gyt-ws"
-  });
+                   speech: "Queja Creada",
+                   displayText: "Queja.. ",
+                   followupEvent : {
+                       name : "e_Pizza_Invalid",
+                       data: { prompt: "I am sorry, thats not a valid pizza size"}
+                    },
+                    source: "from our WS"
+                });
 });
  
 restService.listen(process.env.PORT || 8000, function() {
